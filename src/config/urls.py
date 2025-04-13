@@ -25,6 +25,9 @@ urlpatterns = [
     path('', include('library.urls')),  # 🔗 Include our app URLs
     path('user/', include('users.urls')),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('analytics/', include('analytics.urls')),
+    path('management/', include('management.urls')),
+
 ]
 
 # Configuration to serve media files during development 🖼️
