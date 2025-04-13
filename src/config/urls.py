@@ -22,9 +22,15 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('', include('library.urls')),  # 🔗 Include our app URLs
     path('user/', include('users.urls')),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+=======
+    path('', include('library.urls')),
+    path('analytics/', include('analytics.urls')),
+  # 🔗 Include our app URLs
+>>>>>>> analytics
 ]
 
 # Configuration to serve media files during development 🖼️

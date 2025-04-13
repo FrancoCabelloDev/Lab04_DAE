@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}📊 Analytics Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">📊 Analytics Dashboard</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                Top Viewed Books 📚
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for book in top_books %}
+                    <li class="list-group-item">
+                        {{ book.title }}<br>
+                        <small class="text-muted">Views: {{ book.views.count }}</small>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item">No data yet.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                Most Active Authors ✍️
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for author in top_authors %}
+                    <li class="list-group-item">
+                        {{ author.name }}<br>
+                        <small class="text-muted">Books: {{ author.books.count }}</small>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item">No data yet.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                Popular Categories 🏷️
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for category in top_categories %}
+                    <li class="list-group-item">
+                        {{ category.name }}<br>
+                        <small class="text-muted">Books: {{ category.books.count }}</small>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item">No data yet.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
