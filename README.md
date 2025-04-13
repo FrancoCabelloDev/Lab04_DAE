@@ -27,19 +27,17 @@ Build a practical system that mirrors real-world data relationships using Django
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/library_project.git
+git clone https://github.com/FrancoCabelloDev/Lab04_DAE  
 
-## 🌐 Available URLs
+:D
 
-| View               | Description                              | URL                                                 |
-|--------------------|------------------------------------------|------------------------------------------------------|
-| 🏠 Home            | Homepage with stats & highlights         | http://127.0.0.1:8000/                               |
-| 📚 Book List       | Displays all books                       | http://127.0.0.1:8000/books/                         |
-| 📖 Book Detail     | Individual book details                  | http://127.0.0.1:8000/books/<id>/                    |
-| 👨‍🎨 Author List    | Displays all authors                     | http://127.0.0.1:8000/authors/                       |
-| 👤 Author Detail   | Shows author and their books             | http://127.0.0.1:8000/authors/<id>/                  |
-| 🏷️ Category List   | List of all book categories              | http://127.0.0.1:8000/categories/                    |
-| 🏷️ Category Detail | Books by category                        | http://127.0.0.1:8000/categories/<slug>/             |
-| 👑 Admin Panel     | Manage data through Django Admin         | http://127.0.0.1:8000/admin/                         |
+## 🌐 Application Routes
 
+- 🏠 **Home:** [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/)
+- 👤 **Authors List:** [`http://127.0.0.1:8000/authors/`](http://127.0.0.1:8000/authors/)
+- 📖 **Books List:** [`http://127.0.0.1:8000/books/`](http://127.0.0.1:8000/books/)
+- 🏷️ **Categories:** [`http://127.0.0.1:8000/categories/`](http://127.0.0.1:8000/categories/)
+- 📊 **Analytics Dashboard:** [`http://127.0.0.1:8000/analytics/`](http://127.0.0.1:8000/analytics/)
+- 🏢 **Library Management Dashboard:** [`http://127.0.0.1:8000/management/dashboard/`](http://127.0.0.1:8000/management/dashboard/)
+- 🔐 **Admin Panel:** [`http://127.0.0.1:8000/admin/`](http://127.0.0.1:8000/admin/)
 
