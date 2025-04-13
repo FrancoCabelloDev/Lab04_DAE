@@ -39,6 +39,29 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <span class="navbar-text me-2">
+                                Hello, {{ user.username }}!
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <form method="POST" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <button class="nav-link btn btn-link" style="display: inline; padding: 0; border: none;">
+                                    <i class="bi bi-box-arrow-right"></i> Logout
+                                </button>
+                            </form>
+                        </li>                        
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">
+                                <i class="bi bi-box-arrow-in-right"></i> Login
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
             </div>
         </div>
     </nav>
